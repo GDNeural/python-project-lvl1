@@ -10,4 +10,4 @@ Travis CI Status Image:
 
 Asciinema build release:
 
-<script id="asciicast-301088" src="https://asciinema.org/a/301088.js" async></script>
+[![asciicast](https://asciinema.org/a/301088.svg)](https://asciinema.org/a/301088)
