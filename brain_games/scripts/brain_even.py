@@ -1,7 +1,12 @@
 import random
 import prompt
 from brain_games.cli import name
+from brain_games.scripts.brain_games import main
 
+__name__ = "__second__"
+
+def rules():
+    print ("Answer \"yes\" if number even otherwise answer \"no\".\n")
 
 def wrong_answer_yes():
     print(f"\n\'yes\' is wrong answer ;(. Correct answer was \'no\'.\n Let\'s try again, {name} !\n")
@@ -21,6 +26,8 @@ def invalid_input():
     print("\nYou can type only 'yes' or 'no'!\n")    
 
 def game_process():
+    main()
+    rules()
     counter = 0
     while counter != 3:
         quest_num = random_number()
@@ -41,3 +48,5 @@ def game_process():
         if counter == 3:
             print(f"Congratulations, {name}!")
             break
+
+exit()
