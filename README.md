@@ -10,4 +10,4 @@ Travis CI Status Image:
 
 Asciinema build release:
 
-<a href="https://asciinema.org/a/z1pHWSrmLjqIwyJ5jAlg3ocxC" target="_blank"><img src="https://asciinema.org/a/z1pHWSrmLjqIwyJ5jAlg3ocxC.svg" /></a>
+[![asciicast](https://asciinema.org/a/303245.svg)](https://asciinema.org/a/303245)
