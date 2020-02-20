@@ -1,7 +1,7 @@
 import random
 import prompt
 from brain_games.cli import name
-from brain_games.scripts.brain_games import main
+from brain_games.scripts.brain_games import greet
 
 __name__ = "__second__"
 
@@ -26,7 +26,7 @@ def invalid_input():
     print("\nYou can type only 'yes' or 'no'!\n")    
 
 def game_process():
-    main()
+    greet()
     rules()
     counter = 0
     while counter != 3:
@@ -48,5 +48,6 @@ def game_process():
         if counter == 3:
             print(f"Congratulations, {name}!")
             break
-
+        
+game_process()
 exit()
