@@ -1,22 +1,21 @@
 import random
 import prompt
-from brain_games.cli import name
+from brain_games.cli import *
 from brain_games.scripts.brain_games import greet
 
-__name__ = "__second__"
+__name__ = '__second__'
 
 def rules():
     print ("Answer \"yes\" if number even otherwise answer \"no\".\n")
 
 def wrong_answer_yes():
-    print(f"\n\'yes\' is wrong answer ;(. Correct answer was \'no\'.\n Let\'s try again, {name} !\n")
+    print(f"\n\'yes\' is wrong answer ;(. Correct answer was \'no\'.\n Let\'s try again, {get_name.name} !\n")
 
 def wrong_answer_no():
-    print(f"\n\'no\' is wrong answer ;(. Correct answer was \'yes\'.\n Let\'s try again, {name} !\n")
+    print(f"\n\'no\' is wrong answer ;(. Correct answer was \'yes\'.\n Let\'s try again, {get_name.name} !\n")
 
 def correct_answer():
     print("Correct!\n")
-   
 
 def random_number():
     number = random.randint(1,100)
@@ -28,6 +27,9 @@ def invalid_input():
 def game_process():
     greet()
     rules()
+    welcome_user()
+
+def even_func():
     counter = 0
     while counter != 3:
         quest_num = random_number()
@@ -46,8 +48,9 @@ def game_process():
         else:
             invalid_input()
         if counter == 3:
-            print(f"Congratulations, {name}!")
+            print(f"Congratulations, {get_name.name}!")
             break
         
 game_process()
+even_func()
 exit()
