@@ -16,8 +16,8 @@ wemake-python-styleguide = "^0.8.1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.brain_even:second"
-brain-calc = "brain_games.scripts.brain_calc:third"
+brain-even = "brain_games.scripts.brain_even:even_func"
+brain-calc = "brain_games.scripts.brain_calc:calculating_game"
 
 [build-system]
 requires = ["poetry>=0.12"]
