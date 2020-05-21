@@ -13,11 +13,13 @@ python = "^3.6"
 [tool.poetry.dev-dependencies]
 pytest = "^4.4"
 wemake-python-styleguide = "^0.8.1"
+rope = "^0.17.0"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.brain_even:even_func"
-brain-calc = "brain_games.scripts.brain_calc:calculating_game"
+brain-storm = "brain_games.scripts.brain_storm:poetry_run"
+brain-games = "brain_games.scripts.brain_storm:poetry_run"
+brain-even = "brain_games.scripts.brain_storm:poetry_run"
+brain-calc = "brain_games.scripts.brain_storm:poetry_run"
 
 [build-system]
 requires = ["poetry>=0.12"]
