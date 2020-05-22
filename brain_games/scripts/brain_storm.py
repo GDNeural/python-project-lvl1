@@ -1,17 +1,19 @@
 import prompt
 import random
 import sys
-from brain_games.scripts.brain_calc import game_launch_brain_calc
-from brain_games.scripts.brain_even import game_launch_brain_even
-from brain_games.scripts.brain_gcd import game_launch_brain_gcd
+from brain_games.scripts.brain_calc import launch_calc
+from brain_games.scripts.brain_even import launch_even
+from brain_games.scripts.brain_gcd import launch_gcd
+from brain_games.scripts.brain_progression import launch_progression
 
 # Список игр, правил к ним и исполняемой функции
 
 game_list = [
     ("brain-games",'', None),
-    ("brain-calc", "What is the result of the expression?\n", game_launch_brain_calc),
-    ("brain-even", "Answer \"yes\" if number even otherwise answer \"no\".\n", game_launch_brain_even),
-    ("brain-gcd","Find the greatest common divisor of given numbers.",game_launch_brain_gcd)
+    ("brain-calc", "What is the result of the expression?\n", launch_calc),
+    ("brain-even", "Answer \"yes\" if number even otherwise answer \"no\".\n", launch_even),
+    ("brain-gcd","Find the greatest common divisor of given numbers.", launch_gcd),
+    ("brain-progression","What number is missing in the progression?", launch_progression)
 ]
 
 
