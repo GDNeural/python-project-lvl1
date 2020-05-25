@@ -5,6 +5,7 @@ from brain_games.scripts.brain_calc import launch_calc
 from brain_games.scripts.brain_even import launch_even
 from brain_games.scripts.brain_gcd import launch_gcd
 from brain_games.scripts.brain_progression import launch_progression
+from brain_games.scripts.brain_prime import launch_prime
 
 # Список игр, правил к ним и исполняемой функции
 
@@ -13,7 +14,8 @@ game_list = [
     ("brain-calc", "What is the result of the expression?\n", launch_calc),
     ("brain-even", "Answer \"yes\" if number even otherwise answer \"no\".\n", launch_even),
     ("brain-gcd","Find the greatest common divisor of given numbers.", launch_gcd),
-    ("brain-progression","What number is missing in the progression?", launch_progression)
+    ("brain-progression","What number is missing in the progression?", launch_progression),
+    ("brain-prime","Answer \"yes\" if given number is prime. Otherwise answer \"no\".", launch_prime)
 ]
 
 
@@ -48,6 +50,7 @@ def poetry_run():
     for g in game_list:
         if users_comand == g[0]:
             print(g[1])
+            print()
             game = g
     
     launch_game(game)
