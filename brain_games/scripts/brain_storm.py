@@ -57,7 +57,6 @@ def get_comand():
 
 def poetry_run():
     users_comand = get_comand()
-    print(users_comand)
     game = game_list[0]
     for g in game_list:
         if users_comand == g[0]:
