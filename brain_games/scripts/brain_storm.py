@@ -1,11 +1,11 @@
 import prompt
 import random
 import sys
-from brain_games.scripts.brain_calc import launch_calc
-from brain_games.scripts.brain_even import launch_even
-from brain_games.scripts.brain_gcd import launch_gcd
-from brain_games.scripts.brain_progression import launch_progression
-from brain_games.scripts.brain_prime import launch_prime
+from brain_games.scripts.games.brain_calc import launch_calc
+from brain_games.scripts.games.brain_even import launch_even
+from brain_games.scripts.games.brain_gcd import launch_gcd
+from brain_games.scripts.games.brain_progression import launch_progression
+from brain_games.scripts.games.brain_prime import launch_prime
 
 # Список игр, правил к ним и исполняемой функции
 
@@ -44,16 +44,34 @@ def module_run():
 
 # №2 Через poetry
 
+# Получение команды пользователя при установке пакета
+
+def get_comand():
+    arg = sys.argv[0]
+    for a in range(len(arg)-1,0,-1):
+        if arg[a] == "/":
+            return arg[a+1:]
+    return arg
+
+# Запуск игрового процесса
+
 def poetry_run():
-    users_comand = sys.argv[0]
-    game = 0
+    users_comand = get_comand()
+    print(users_comand)
+    game = game_list[0]
     for g in game_list:
         if users_comand == g[0]:
             print(g[1])
             print()
             game = g
-    
     launch_game(game)
+
+# Взять ввод пользователя
+# Найти первый слеш с конца:
+# Просмотерть элементы с конца до первого слеша
+# Взять срез до этого элемента
+
+
 
 # Общая логика для запуска всех игр
     
