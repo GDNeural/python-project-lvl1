@@ -9,6 +9,10 @@ Travis CI Status Image:
 [![Build Status](https://travis-ci.org/GDNeural/python-project-lvl1.svg?branch=master)](https://travis-ci.org/GDNeural/python-project-lvl1)
 
 Asciinema build release:
+
+Overall installling and run:
+[![asciicast](https://asciinema.org/a/334369.svg)](https://asciinema.org/a/334369)
+
 brain-even
 
 [![asciicast](https://asciinema.org/a/303245.svg)](https://asciinema.org/a/303245)
