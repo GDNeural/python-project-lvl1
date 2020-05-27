@@ -1,10 +1,18 @@
 [tool.poetry]
 name = "GDNeural_brain_games"
-version = "0.1.0"
-description = ""
-authors = ["skip"]
+version = "1.0.0"
+description = "Few_games_for_your_brains"
+authors = ["GDNeural <mighty.python777@gmail.com>"]
 packages = [
   { include = "brain_games" },
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Education",
+  "License :: Free for non-commercial use",
+  "Operating System :: Unix",
+  "Programming Language :: Python",
+  "Topic :: Education"
 ]
 
 [tool.poetry.dependencies]
