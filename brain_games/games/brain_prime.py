@@ -1,6 +1,7 @@
 import random
 import prompt
 import math
+from brain_games.game_engine import go_input_whrum_whrum
 
 prime_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173,
@@ -32,7 +33,7 @@ def launch_prime():
   number = random.randint(1,3572)
   
   print("Question: ", number)
-  user_answer = prompt.string("Answer: ")
+  user_answer = go_input_whrum_whrum()
   user_yes = user_answer == "Yes"
   user_no = user_answer == "No"
   

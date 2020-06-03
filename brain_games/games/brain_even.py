@@ -1,5 +1,6 @@
 import random
 import prompt
+from brain_games.game_engine import go_input_whrum_whrum
 
 def rules():
     print ("Answer \"yes\" if number even otherwise answer \"no\".\n")
@@ -7,7 +8,7 @@ def rules():
 def launch_even():
     guess_num = random.randint(1,100)
     print("Question: %s\n"%(guess_num))
-    user_answ = prompt.string("Answer: ")
+    user_answ = go_input_whrum_whrum()
     guess_even = guess_num % 2 == 0
     users_yes = user_answ == "Yes"
     guess_not_even = guess_num % 2 == 1

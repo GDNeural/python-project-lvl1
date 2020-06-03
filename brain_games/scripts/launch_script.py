@@ -11,10 +11,10 @@ from brain_games.game_engine import launch_game
 game_list = [
     ("brain-games",'', None),
     ("brain-calc", "What is the result of the expression?\n", launch_calc),
-    ("brain-even", "Answer \"yes\" if number even otherwise answer \"no\".\n", launch_even),
+    ("brain-even", "Answer \"Yes\" if number even otherwise answer \"No\".\n", launch_even),
     ("brain-gcd","Find the greatest common divisor of given numbers.", launch_gcd),
     ("brain-progression","What number is missing in the progression?", launch_progression),
-    ("brain-prime","Answer \"yes\" if given number is prime. Otherwise answer \"no\".", launch_prime)
+    ("brain-prime","Answer \"Yes\" if given number is prime. Otherwise answer \"No\".", launch_prime)
 ]
 
 

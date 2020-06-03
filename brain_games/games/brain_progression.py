@@ -1,5 +1,6 @@
 import random
 import prompt
+from brain_games.game_engine import go_input_whrum_whrum
 
 def launch_progression():
     length = 10
@@ -20,5 +21,5 @@ def launch_progression():
     print()
     
 
-    user_answer = prompt.integer("Answer: ")
+    user_answer = int(go_input_whrum_whrum())
     return user_answer == random_value
