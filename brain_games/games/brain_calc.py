@@ -2,9 +2,6 @@ import random
 import prompt
 from operator import add, sub, mul
 
-def rules():
-    print ("What is the result of the expression?\n")
-
 def launch_calc():
     vrbl1 = random.randint(1,10)
     vrbl2 = random.randint(1,10)
