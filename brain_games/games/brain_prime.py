@@ -25,5 +25,4 @@ def launch_prime():
   user_answer = go_input_whrum_whrum()
   user_yes = user_answer == "Yes"
   user_no = user_answer == "No"
-  
   return ((number in prime_list) and user_yes) or ((number not in prime_list) and user_no)
