@@ -1,7 +1,5 @@
 import random
-import prompt
 import math
-from brain_games.game_engine import go_input_whrum_whrum
 
 # Сокращённый алгоритм Эратосфена
 
@@ -19,10 +17,10 @@ def get_primes(number):
     return primes
 
 def launch_prime():
-  number = random.randint(1,10000)
-  prime_list = get_primes(number)
-  print("Question: ", number)
-  user_answer = go_input_whrum_whrum()
-  user_yes = user_answer == "Yes"
-  user_no = user_answer == "No"
-  return ((number in prime_list) and user_yes) or ((number not in prime_list) and user_no)
+    question = random.randint(1,10000)
+    prime_list = get_primes(question)
+    if question in prime_list:
+        answer = "Yes"
+    else:
+        answer = "No"
+    return (question,answer)

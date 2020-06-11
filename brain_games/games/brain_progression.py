@@ -1,25 +1,21 @@
 import random
 import prompt
-from brain_games.game_engine import go_input_whrum_whrum
 
 def launch_progression():
     length = 10
     step = random.randint(1,10)
     start = random.randint(1,10)
-    counter = start
+    question = [start,]
     random_index = random.randint(0,length - 1)
-    random_value = 0
-
-    print("Question:", end=" ")
+    
     for i in range(length):
         if i == random_index:
-            print("..", end=" ")
-            random_value = counter
+            answer = question[i]+step
+            question.append("..")
+        elif question[i] == "..":
+            question.append(answer+step)
         else:
-            print(counter, end=" ")
-        counter += step
-    print()
+            next_step = int(question[i]) + step
+            question.append(next_step)
     
-
-    user_answer = int(go_input_whrum_whrum())
-    return user_answer == random_value
+    return (question, answer)
