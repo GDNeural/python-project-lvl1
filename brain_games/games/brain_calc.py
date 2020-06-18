@@ -2,6 +2,7 @@ import random
 from operator import add, sub, mul
 
 def launch_calc():
+    rules = "What is the result of the expression?\n"
     vrbl1 = random.randint(1,10)
     vrbl2 = random.randint(1,10)
     ops = ((add,"+"), (sub,"-"), (mul, "*"))
@@ -9,4 +10,4 @@ def launch_calc():
     func, symbol = random.choice(ops)
     question = [vrbl1, symbol, vrbl2]
     answer = func(vrbl1, vrbl2)
-    return (question, answer)
+    return (rules, question, answer)

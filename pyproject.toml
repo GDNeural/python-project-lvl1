@@ -22,12 +22,12 @@ python = "^3.6"
 Pylint = "^2.4.4"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.game_engine:poetry_run"
-brain-even = "brain_games.game_engine:poetry_run"
-brain-calc = "brain_games.game_engine:poetry_run"
-brain-gcd = "brain_games.game_engine:poetry_run"
-brain-progression = "brain_games.game_engine:poetry_run"
-brain-prime = "brain_games.game_engine:poetry_run"
+brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.b_even:run_even"
+brain-calc = "brain_games.scripts.b_calc:calculate"
+brain-gcd = "brain_games.scripts.b_gcd:run_gcd"
+brain-progression = "brain_games.scripts.b_progression:run_progression"
+brain-prime = "brain_games.scripts.b_prime:run_prime"
 
 [build-system]
 requires = ["poetry>=0.12"]

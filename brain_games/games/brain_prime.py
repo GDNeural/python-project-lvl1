@@ -17,10 +17,11 @@ def get_primes(number):
     return primes
 
 def launch_prime():
+    rules = "Answer \"Yes\" if given number is prime. Otherwise answer \"No\".\n"
     question = random.randint(1,10000)
     prime_list = get_primes(question)
     if question in prime_list:
         answer = "Yes"
     else:
         answer = "No"
-    return (question,answer)
+    return (rules,question,answer)

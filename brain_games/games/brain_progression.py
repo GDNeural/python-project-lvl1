@@ -2,6 +2,7 @@ import random
 import prompt
 
 def launch_progression():
+    rules = "What number is missing in the progression?\n"
     length = 10
     step = random.randint(1,10)
     start = random.randint(1,10)
@@ -18,4 +19,4 @@ def launch_progression():
             next_step = int(question[i]) + step
             question.append(next_step)
     
-    return (question, answer)
+    return (rules, question, answer)
