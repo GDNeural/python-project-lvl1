@@ -17,10 +17,10 @@ def launch_game(game):
     print ("Welcome to the Brain Games!\n")
     name = prompt.string('May I have your name? ')
     print('Hello, %s!\n'%(name))
-    counter = 0
+    rounds = 0
     rules = game()[0]
     print(rules) 
-    while counter !=3:
+    while rounds !=3:
         q_a = game()
         if isinstance(q_a[1], int):
             print("Question: ",q_a[1])
@@ -31,7 +31,7 @@ def launch_game(game):
 
         if str(q_a[2]) == i:
             print("Correct!\n")
-            counter +=1
+            rounds +=1
         else:
             print(mistakes_that_makes[random.randint(0,5)])
     print("Congrats, %s!"%(name))
