@@ -1,22 +1,19 @@
 import random
-import prompt
 
-def launch_progression():
-    rules = "What number is missing in the progression?\n"
+description = "What number is missing in the progression?"
+
+def find_missing_number():
     length = 10
     step = random.randint(1,10)
     start = random.randint(1,10)
-    question = [start,]
     random_index = random.randint(0,length - 1)
-    
+    question = []
     for i in range(length):
         if i == random_index:
-            answer = question[i]+step
+            answer = start + step * i
             question.append("..")
-        elif question[i] == "..":
-            question.append(answer+step)
         else:
-            next_step = int(question[i]) + step
+            next_step = start + step * i
             question.append(next_step)
     
-    return (rules, question, answer)
+    return (question, answer)
