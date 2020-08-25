@@ -1,11 +1,11 @@
 import random
 import math
 
-description = """Answer "Yes" if given number is prime. Otherwise answer "No"."""
+DESCRIPTION = """Answer "yes" if given number is prime. Otherwise answer "no"."""
 
 # Сокращённый алгоритм Эратосфена
 
-def get_primes(number):
+def get_list_of_primes(number):
     is_prime = [True] * (number + 1)
     is_prime[0], is_prime[1] = False, False
     for i in range(2, number + 1):
@@ -18,11 +18,13 @@ def get_primes(number):
             primes.append(i)
     return primes
 
-def guess_prime_number():
+def provide_data():
     question = random.randint(1,10000)
-    prime_list = get_primes(question)
+    prime_list = get_list_of_primes(question)
     if question in prime_list:
-        answer = "Yes"
+        answer = "yes"
     else:
-        answer = "No"
+        answer = "no"
     return (question,answer)
+
+game = (provide_data,DESCRIPTION)

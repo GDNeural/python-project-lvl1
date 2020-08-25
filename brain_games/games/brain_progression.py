@@ -1,8 +1,8 @@
 import random
 
-description = "What number is missing in the progression?"
+DESCRIPTION = "What number is missing in the progression?"
 
-def find_missing_number():
+def provide_data():
     length = 10
     step = random.randint(1,10)
     start = random.randint(1,10)
@@ -17,3 +17,5 @@ def find_missing_number():
             question.append(next_step)
     
     return (question, answer)
+
+game = (provide_data,DESCRIPTION)

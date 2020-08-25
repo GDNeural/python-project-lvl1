@@ -1,11 +1,13 @@
 import random
 
-description = """Answer "Yes" if number even otherwise answer "No"."""
+DESCRIPTION = """Answer "yes" if number even otherwise answer "no"."""
 
-def guess_even_number():
+def provide_data():
     question = random.randint(1,100)
     if question % 2 == 0:
-        answer = "Yes"
+        answer = "yes"
     else:
-        answer = "No"
-    return (description, question, answer)
+        answer = "no"
+    return (question, answer)
+
+game = (provide_data,DESCRIPTION)

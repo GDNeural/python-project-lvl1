@@ -1,9 +1,8 @@
 from brain_games.game_engine import launch_game
-from brain_games.games.brain_progression import find_missing_number
-from brain_games.games.brain_progression import description
+import brain_games.games.brain_progression as p
 
 def main():
-    launch_game(find_missing_number,description)
+    launch_game(p.game)
 
 if __name__ == '__main__':
     main()

@@ -1,14 +1,22 @@
 import random
 from operator import add, sub, mul
 
-description = "What is the result of the expression?"
+DESCRIPTION = "What is the result of the expression?"
 
-def calculate_operation():
+
+def get_operation_sign(op):
+    mapping = {add:"+", sub:"-", mul:"*"}
+    return mapping[op]
+
+
+def provide_data():
     random_number_1 = random.randint(1,10)
     random_number_2 = random.randint(1,10)
-    operators = ((add,"+"), (sub,"-"), (mul, "*"))
-    # Следующим шагом одновременно присваиваем название элементам подкортежа и выбираем случайный
-    func, symbol = random.choice(operators)
-    question = [random_number_1, symbol, random_number_2]
-    answer = func(random_number_1, random_number_2)
+    operation = random.choice([add, sub, mul])
+    sign = get_operation_sign(operation)
+    
+    question = [random_number_1, sign, random_number_2]
+    answer = operation(random_number_1, random_number_2)
     return (question, answer)
+
+game = (provide_data,DESCRIPTION)

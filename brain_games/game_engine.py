@@ -13,24 +13,26 @@ mistakes_that_makes = [
     "\nWash your mouse after that\n"
 ]
 
-def launch_game(game,description):
+def launch_game(game):
     print ("Welcome to the Brain Games!\n")
     name = prompt.string('May I have your name? ')
     print('Hello, %s!\n'%(name))
-    rounds = 0
+    i = 3
+    description = game[1]
     print(description, end="\n") 
-    while rounds !=3:
-        q_a = game()
-        if isinstance(q_a[0], int):
-            print("Question: ",q_a[1])
+    while i != 0:
+        q_a = game[0]()
+        question, answer = q_a[0],q_a[1]
+        if isinstance(question, int):
+            print("Question: ",answer)
         else:
-            print ("Question:",*q_a[0], sep=" ")
+            print ("Question:",*question, sep=" ")
 
-        i = input("Answer: ")
+        a = input("Answer: ")
 
-        if str(q_a[1]) == i:
+        if str(answer) == a:
             print("Correct!\n")
-            rounds +=1
+            i -= 1
         else:
             print(mistakes_that_makes[random.randint(0,5)])
     print("Congrats, %s!"%(name))
